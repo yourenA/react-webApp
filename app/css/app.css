@@ -1,0 +1,186 @@
+.flex-h {
+    display: -webkit-box;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;		 /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;	  /* TWEENER - IE 10 */
+    display: -webkit-flex;	 /* NEW - Chrome */
+    display: flex;			 /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    /* 09版 */
+    -webkit-box-orient: horizontal;
+    /* 12版 */
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+}
+.flex1 {
+    -webkit-box-flex: 1;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;		 /* OLD - Firefox 19- */
+    -webkit-flex: 1;		  /* Chrome */
+    -ms-flex: 1;			  /* IE 10 */
+    flex: 1;				  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+    background: #dddddd;
+}
+.top{
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    height: 4rem;
+}
+.bannar{
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.222rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #1DA50A;
+
+}
+.option{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: #FFFFFF;
+    border-bottom: 1px  solid #cccccc;
+}
+
+.option li{
+    display: inline-block;
+    height: calc(1.5rem - 1px );
+    line-height:  calc(1.5rem - 1px );
+    font-size: 0.8rem;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+.option li:first-child{
+    -webkit-box-flex: 1.5;	  /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1.5;		 /* OLD - Firefox 19- */
+    -webkit-flex: 1.5;		  /* Chrome */
+    -ms-flex: 1.5;			  /* IE 10 */
+    flex: 1.5;				  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.option li i{
+    width:0;
+    height:0;
+    border-width:0 0.2rem 0.2rem;
+    border-style:solid;
+    border-color:transparent transparent #333;/*透明 透明  灰*/
+    position:absolute;
+    top:0.55rem;
+    margin-left: 0.4rem;
+}
+.option li i.up{
+    border-color:transparent transparent #1DA50A;/*透明 透明  灰*/
+
+}
+.option li i:after{
+    content: "";
+    width:0;
+    height:0;
+    border-width:0.2rem 0.2rem  0 ;
+    border-style:solid;
+    border-color:#333 transparent #333;/*黄 透明 透明 */
+    position:absolute;
+    bottom:-0.55rem;
+    margin-left: -0.2rem;
+}
+
+.option li i.down{
+    border-color:transparent transparent #333;/*透明 透明  灰*/
+}
+.option li i.down:after{
+    content: "";
+    width:0;
+    height:0;
+    border-width:0.2rem 0.2rem  0 ;
+    border-style:solid;
+    border-color:#1DA50A transparent #1DA50A;/*黄 透明 透明 */
+    position:absolute;
+    bottom:-0.55rem;
+    margin-left: -0.2rem;
+
+}
+.items{
+    position: absolute;
+    width: 100%;
+    top:4rem ;
+}
+.items li{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding:0 0.6rem;
+    height: 5.5rem;
+    background: #FFFFFF;
+    margin: 0.5rem auto;
+}
+.items li .item-top{
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.75rem;
+}
+.items li .item-top .name{
+    float: left;
+}
+.items li .item-top .time{
+    float: right;
+}
+.items li .from{
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000;
+}
+.items li .from .from-time{
+    width: 4rem;
+    margin-right: 0.6rem;
+}
+.items li .from .from-address:before{
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #1DA50A;
+    margin-right: 0.3rem;
+
+}
+.items li .from .from-money{
+    float: right;
+    color: rgb(253,143,1);
+}
+.items li .to{
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.75rem;
+}
+.item-bottom{
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.75rem;
+}
+.items li .to .to-ticket{
+    float: right;
+}
+.items li .to .to-time{
+    margin-right: 1.11rem;
+}
+.items li .to .to-address:before{
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #e25151;
+    margin-right: 0.3rem;
+}
